@@ -1,0 +1,11 @@
+<button class="btn btn-primary btn-sm" (click)="viewLanguages = !viewLanguages"> Show Languages </button>
+<hr>
+<div *ngIf="viewLanguages" >
+  <ul class="list-group">
+    <li  class="list-group-item list-group-item-info"
+    *ngFor="let language of languages" >
+      {{language}}
+    </li>
+  </ul>
+</div>
+

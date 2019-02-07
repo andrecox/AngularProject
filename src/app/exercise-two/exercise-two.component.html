@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-12">
+    <form>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label for="career">Career</label>
+          <input type="text" class="form-control" #careerInput />
+        </div>
+        <div class="col-sm-4 form-group">
+          <label for="students">Students</label>
+          <input type="number" class="form-control" #studentsInput/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="btn-group col-sm-12">
+          <button type="button" class="btn btn-success" (click)="addCareer()">Add</button>
+          <button type="button" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn btn-primary">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-success"
+    *ngFor="let careerItem of careers" >
+      {{careerItem.name}} ({{ careerItem.students}})
+    </li>
+  </ul>
+</div>
