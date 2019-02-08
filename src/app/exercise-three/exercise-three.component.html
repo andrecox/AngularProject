@@ -1,3 +1,12 @@
-<p>
-  exercise-three works!
-</p>
+<div>
+  <h4>New Careers</h4>
+</div>
+<hr>
+<div  >
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-warning"
+    *ngFor="let careerItem of newcareers" >
+      {{careerItem.name}} ({{ careerItem.students}})
+    </li>
+  </ul>
+</div>

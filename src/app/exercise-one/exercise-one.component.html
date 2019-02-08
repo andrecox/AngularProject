@@ -1,4 +1,6 @@
-<button class="btn btn-primary btn-sm" (click)="viewLanguages = !viewLanguages"> Show Languages </button>
+<h4>{{inputPadre}}</h4>
+<button class="btn btn-primary btn-sm"
+        (click)="viewLanguages = !viewLanguages"> Languages </button>
 <hr>
 <div *ngIf="viewLanguages" >
   <ul class="list-group">
@@ -6,6 +8,7 @@
     *ngFor="let language of languages" >
       {{language}}
     </li>
+
   </ul>
 </div>
 

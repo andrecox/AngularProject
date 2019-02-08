@@ -1,15 +1,15 @@
-<app-header></app-header>
+<app-header (activateOne)="viewExerciseOne=$event" ></app-header>
 <div class="container">
   <div class="page-header">
     <h1>Training</h1>
   </div>
-  <div class="col-sm-2">
-    <app-exercise-one></app-exercise-one>
+  <div class="col-sm-2" >
+    <app-exercise-one *ngIf="viewExerciseOne" [inputPadre] = "ParentVariable"></app-exercise-one>
   </div>
-  <div class="col-sm-6">
-    <app-exercise-two></app-exercise-two>
+  <div class="col-sm-6" >
+    <app-exercise-two *ngIf="viewExerciseTwo" ></app-exercise-two>
   </div>
   <div class="col-sm-4">
-    <app-exercise-three></app-exercise-three>
+    <app-exercise-three *ngIf="viewExerciseThree" ></app-exercise-three>
   </div>
 </div>
